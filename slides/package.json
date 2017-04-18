@@ -12,7 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^2.4.1"
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1",
+    "webpack-build-notifier": "^0.1.13"
   },
   "dependencies": {
     "css-loader": "^0.28.0",

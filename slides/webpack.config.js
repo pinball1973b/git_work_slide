@@ -1,48 +1,41 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+    var path                       = require('path');
+    var ExtractTextPlugin          = require('extract-text-webpack-plugin');
+    var BrowserSyncPlugin          = require('browser-sync-webpack-plugin');  
+    var WebpackBuildNotifierPlugin = require('webpack-build-notifier'); 
 
-module.exports = [{
-  entry: {
-    bundle: './src/app.js'
-  },
-  output: {
-    path: path.join(__dirname, 'public'),
-    filename: '[name].js'
-  },
-  module: {
-    loaders: [
-      {
-        loader: 'babel',
-        exclude: /node_modules/,
-        test: /\.js[x]?$/,
-        query: {
-          cacheDirectory: true,
-          presets: ['react', 'es2015']
-        }
-      }
-    ]
-  }
-}, {
-  entry: {
-    style: './src/stylesheets/main.js'
-  },
-  output: {
-    path: path.join(__dirname, 'public/css'),
-    filename: '[name].css'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+    module.exports = {
+    devtool: 'source-map',
+    entry: {
+        style: './scss/style.scss'
+    },
+    output: {
+        path: path.join(__dirname, './core'),
+        filename: '[name].css'
+    },
+      module: {
+        rules: [
+          {
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract(
+              {
+                fallback: "style-loader",
+                use: ["css-loader", "sass-loader?outputStyle=expanded"]
+              }
+            )
+          }
+        ]
       },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
-      }
+    plugins: [
+        new WebpackBuildNotifierPlugin(),
+        new ExtractTextPlugin('[name].css'),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            server: { baseDir: [''] },
+            files: [
+                '*.css',
+                '*.html'
+            ]
+        })
     ]
-  },
-  plugins: [
-        new ExtractTextPlugin("[name].css")
-    ]
-}];
+    };
