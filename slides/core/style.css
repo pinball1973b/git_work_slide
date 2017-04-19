@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.contents-box {
+.contents-flex-box {
   display: flex;
 }
 
