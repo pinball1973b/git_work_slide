@@ -1,14 +1,9 @@
-.test {
-  margin: 0;
-  padding: 0;
+.deck-slide-scaler {
+  width: 100%;
 }
 
-.test2 {
-  display: none;
-}
-
-.test3 {
-  text-indent: -9999px;
+.contents-flex-box {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map*/
