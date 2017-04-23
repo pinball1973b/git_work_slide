@@ -49,7 +49,6 @@
           <li>バージョン管理</li>
           <li>複数人での開発</li>
           <li>Git≠GitHub</li>
-          <li>絵で見てわかる概要</li>
           <li>実際に使ってみよう</li>
           <li>よく使うコマンド</li>
           <li>このスライドのリポジトリ</li>
@@ -63,17 +62,17 @@
       <div>
         <blockquote>
           <p>git（ギット）は、プログラムのソースコードなどの変更履歴を記録・追跡するための分散型バージョン管理システムである。Linuxカーネルのソースコード管理に用いるためにリーナス・トーバルズによって開発され、それ以降ほかの多くのプロジェクトで採用されている。Linuxカーネルのような巨大プロジェクトにも対応できるように、動作速度に重点が置かれている。現在のメンテナンスは濱野純 (Junio C Hamano) が担当している。</p>
-          
+
           <p>gitでは、各ユーザのワーキングディレクトリに、全履歴を含んだリポジトリの完全な複製が作られる。したがって、ネットワークにアクセスできないなどの理由で中心リポジトリにアクセスできない環境でも、履歴の調査や変更の記録といったほとんどの作業を行うことができる。これが「分散型」と呼ばれる理由である。</p>
-          
+
           <p class="align-right"><a href="https://ja.wikipedia.org/wiki/Git">git - Wikipedia</a></p>
         </blockquote>
       </div>
     </section>
-    
+
     <section class="slide">
-      <h2>Gitとは？</h2>
-      
+      <h2>何故Gitを使うのか？</h2>
+
       <h3>Gitのない開発</h3>
       <div class="contents-flex-box">
         <div class="contents-section-box">
@@ -97,7 +96,7 @@
             <img src="img/3.png">
           </div>
           <div>
-             納品前に開発してたパソコン壊れた。バックアップも取ってないや… (・ω<) 
+             納品前に開発してたパソコン壊れた。バックアップも取ってないや… (・ω<)
           </div>
         </div>
         <div class="content-section-box">
@@ -105,14 +104,14 @@
             <img src="img/4.png">
           </div>
           <div>
-             俺が作った部分後輩が上書きしやがったせいでやり直しだ。 
+             俺が作った部分後輩が上書きしやがったせいでやり直しだ。
           </div>
         </div>
       </div>
     </section>
-    
+
     <section class="slide">
-      <h2>Gitとは？</h2>
+      <h2>バージョン管理</h2>
       <div class="contents-box">
         <h3>バージョン管理=履歴・差分管理</h3>
         <div class="img-box">
@@ -122,11 +121,35 @@
           <p>作業履歴・差分があるのでひとつ前に戻ることができる。</p>
           <p>現在の状態と以前の状態を比較することができる。</p>
         </div>
+        <div>
+          <ul>
+            <li>
+              Release<br>
+              20170401
+            </li>
+            <li>
+              Release<br>
+              20170501
+            </li>
+            <li>
+              Release<br>
+              20170601
+            </li>
+          </ul>
+          <ul>
+            <li>Fix<br>
+              20170405
+            </li>
+            <li>Fix<br>
+              20170515
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    
+
     <section class="slide">
-      <h2>Gitとは？</h2>
+      <h2>バージョン管理</h2>
       <div class="contents-box">
         <h3>分散型</h3>
         <div class="img-box">
@@ -136,6 +159,183 @@
           <p>分散型でそれぞれのローカルマシンに履歴とファイルが残る。</p>
           <p>リモートにも履歴とファイルが残るので、万が一の場合のバックアップにもなる。</p>
         </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>複数人での開発</h2>
+      <div class="contents-box">
+        <h3>ローカルリポジトリとリポートリポジトリ</h3>
+        <div class="img-box">
+            <img src="img/6.png">
+        </div>
+        <div>
+          <p>各ローカルマシンのリポジトリで行われた開発を、リポートリポジトリに反映。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Git≠GitHub</h2>
+      <div class="contents-box">
+        <h3>Git</h3>
+        <div>
+          <p>Gitはバージョン管理を行う<strong>ツール</strong>の名前である。</p>
+        </div>
+        <div>
+          <h3>GitHub</h3>
+          <p>GitHubは<strong>Gitのリモートリポジトリ</strong>を提供するサービスの名前である。</p>
+          <p>同様のサービスに<strong>Bitbucket</strong>、<strong>Backlog</strong>、<strong>GitLab</strong>などがある。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>実際に使ってみよう</h2>
+      <div class="contents-box">
+        <h3>必要なソフトウェア・サービス</h3>
+        <dl>
+          <dt>PuTTY・Teraterm(Widows) / ターミナル(Mac)などのターミナルソフトウェア</dt>
+          <dd>基本的にGitはCUIで操作するため<br>
+          ※但しGUIで操作するソフトもあります。</dd>
+          <dt>GitHub・Bitbucketなどのアカウント</dt>
+          <dd>リモートリポジトリ管理のため<br>
+          ※プロジェクトによってはこれらを使わず、自前でリポートリポジトリ用サーバを用意する場合もあります。</dd>
+          <dt>SourceTree・GitHub DesktopなどのGUIツール</dt>
+          <dd>Gitをより使いやすくするために</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>よく使うコマンド</h2>
+      <div class="contents-box">
+        <div>
+          <h3>git init</h3>
+          <div>
+            <code>
+              $git inite
+            </code>
+            <p>ディレクトリにリポジトリを作成</p>
+          </div>
+        </div>
+        <div>
+          <h3>git clone</h3>
+          <div>
+            <code>
+              $ git clone [repository PATH] [new repository PATH]
+            </code>
+            <p>リポジトリをクローン。</p>
+          </div>
+        </div>
+        <div>
+          <h3>git add</h3>
+          <div>
+            <code>
+              $ git add [filename]
+            </code>
+            <p>ファイルやディレクトリをインデックスに登録。</p>
+            <code>
+              $ git add -A
+            </code>
+            <p>すべての変更を含むワークツリーの内容をインデックスに追加。</p>
+          </div>
+        </div>
+        <div>
+          <h3>git commit</h3>
+          <div>
+            <code>
+              $ git commit -m “[comment]”
+            </code>
+            <p>コミットを行い、コミットメッセージを同時に指定。</p>
+            <code>
+              $ git add -A
+            </code>
+            <p>すべての変更を含むワークツリーの内容をインデックスに追加。</p>
+          </div>
+        </div>
+
+      <q><a href="http://qiita.com/2m1tsu3/items/6d49374230afab251337">基本的なGitコマンドまとめ</a></q>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>よく使うコマンド</h2>
+      <div class="contents-box">
+        <div>
+          <h3>git branch</h3>
+          <div>
+            <code>
+              $ git branch &[new branch]
+            </code>
+            <p>現在のブランチの確認.&新しいブランチを作成する.</p>
+            <code>$ git branch -a</code>
+            <p>すべてのブランチを確認する。</p>
+
+            <code>$ git branch -r</code>
+            <p>リモートブランチを確認する。</p>
+
+            <code>$ git branch -d [branch]</code>
+            <p>ブランチを削除する。</p>
+
+            <code>$ git branch -m [branch] [new branchname]</code>
+            <p>ブランチの名前を変更する。</p>
+          </div>
+        </div>
+        <div>
+          <h3>git merge</h3>
+          <div>
+            <code>
+              $ git merge
+            </code>
+            <p>現在のブランチをほかのブランチとマージする</p>
+          </div>
+        </div>
+
+      <q><a href="http://qiita.com/2m1tsu3/items/6d49374230afab251337">基本的なGitコマンドまとめ</a></q>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>よく使うコマンド</h2>
+      <div class="contents-box">
+        <div>
+          <h3>git push</h3>
+          <div>
+            <code>
+              $ git push [remote repository PATH] [branch]
+            </code>
+            <p>リモートリポジトリに変更を書き込む</p>
+          </div>
+        </div>
+        <div>
+          <h3>git pull</h3>
+          <div>
+            <code>
+              $ git pull [remote repository PATH] [branch]
+            </code>
+            <p>リモートリポジトリの変更を取り込む</p>
+          </div>
+        </div>
+        <div>
+          <h3>git fetch</h3>
+          <div>
+            <code>$ git fetch [remote repository]</code>
+            <p>リモートリポジトリの最新情報を追加する。</p>
+
+            <code>$ git fetch --prune</code>
+            <p>リモートリポジトリの削除情報をローカルに更新する。</p>
+          </div>
+        </div>
+
+      <q><a href="http://qiita.com/2m1tsu3/items/6d49374230afab251337">基本的なGitコマンドまとめ</a></q>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>このスライドのリポジトリ</h2>
+      <div>
+
       </div>
     </section>
 
