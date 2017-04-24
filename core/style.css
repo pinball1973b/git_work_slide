@@ -1,5 +1,21 @@
+.profile {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
 li {
   list-style: none;
+}
+
+.decimal li {
+  list-style-type: decimal;
+}
+
+.wikipedia {
+  width: 100%;
 }
 
 .deck-slide-scaler {
