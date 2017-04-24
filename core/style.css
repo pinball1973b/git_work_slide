@@ -6,6 +6,21 @@
   font-size: 4rem;
 }
 
+.center-text-box {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.contents-box dt {
+  font-size: 2.5rem;
+  font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.contents-box dd {
+  margin-bottom: 10vh;
+}
+
 li {
   list-style: none;
 }
@@ -28,13 +43,13 @@ li {
   grid-template-columns: 50% 50%;
 }
 
-.contents-flex-box .contents-section-box {
+.contents-section-box {
   position: relative;
   font-size: 20px;
   display: inline-flex;
 }
 
-.contents-flex-box .contents-section-box div[class^=word] {
+.contents-section-box div[class^=word] {
   width: 350px;
   height: 130px;
   padding: 40px 10px 10px 10px;
@@ -43,7 +58,7 @@ li {
   position: relative;
 }
 
-.contents-flex-box .contents-section-box div[class^=word]:after {
+.contents-section-box div[class^=word]:after {
   border-right: 12px solid #fff;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
@@ -54,8 +69,16 @@ li {
   top: 50%;
 }
 
-.contents-flex-box .contents-section-box .img-box img {
+.contents-section-box .img-box img {
   height: 300px;
+}
+
+.hatena {
+  margin: 10%;
+}
+
+.hatena .img-box img {
+  height: 600px;
 }
 
 .version-flow-box ul {
@@ -94,6 +117,11 @@ li {
   text-align: center;
   border-radius: 50%;
   box-sizing: border-box;
+}
+
+.small-img img {
+  width: 400px;
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map*/
