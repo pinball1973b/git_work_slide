@@ -13,6 +13,11 @@
   font-size: 4rem;
 }
 
+.normal-list {
+  li {
+    list-style-type: disc;
+  }
+}
 
 .contents-box {
   dt {
@@ -70,6 +75,16 @@ li {
       top: 50%;
     }
   }
+  .word_5 {
+    width: 700px;
+    height: 130px;
+    padding: 40px 10px 10px 10px;
+    border-radius: 35%;
+    background: #fff;
+    position: relative;
+    top: 200px;
+    font-size: 3rem;
+  }
   .img-box {
     img {
       height: 300px;
@@ -78,6 +93,13 @@ li {
 }
 .hatena {
   margin: 10%;
+  .contents-section-box {
+    width: 1000px;
+    .word_5 {
+      width: 500px;
+      text-align: center;
+    }
+  }
   .img-box {
     img {
       height: 600px;
