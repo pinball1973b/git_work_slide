@@ -43,7 +43,7 @@
     <section class="slide">
       <h2>Agenda</h2>
       <div>
-        <ol>
+        <ol class="decimal">
           <li>Gitとは？</li>
           <li>何故Gitを使うのか？</li>
           <li>バージョン管理</li>
@@ -60,14 +60,29 @@
     <section class="slide">
       <h2>Gitとは？</h2>
       <div>
-        <blockquote>
+        <blockquote class="wikipedia">
           <p>git（ギット）は、プログラムのソースコードなどの変更履歴を記録・追跡するための分散型バージョン管理システムである。Linuxカーネルのソースコード管理に用いるためにリーナス・トーバルズによって開発され、それ以降ほかの多くのプロジェクトで採用されている。Linuxカーネルのような巨大プロジェクトにも対応できるように、動作速度に重点が置かれている。現在のメンテナンスは濱野純 (Junio C Hamano) が担当している。</p>
 
           <p>gitでは、各ユーザのワーキングディレクトリに、全履歴を含んだリポジトリの完全な複製が作られる。したがって、ネットワークにアクセスできないなどの理由で中心リポジトリにアクセスできない環境でも、履歴の調査や変更の記録といったほとんどの作業を行うことができる。これが「分散型」と呼ばれる理由である。</p>
-
           <p class="align-right"><a href="https://ja.wikipedia.org/wiki/Git">git - Wikipedia</a></p>
         </blockquote>
       </div>
+    </section>
+
+    <section class="slide">
+      <h2>Gitとは？</h2>
+      <div class="contents-box hatena">
+        <div class="contents-section-box">
+          <div class="img-box">
+            <img src="img/12.png">
+          </div>
+          <div class="word_5">
+             なんのこっちゃ？<br>
+             意味がわからん？
+          </div>
+        </div>
+      </div>
+      <div class="center-text-box">これだけじゃなんのことかわからないので次へ</div>
     </section>
 
     <section class="slide">
@@ -108,6 +123,7 @@
           </div>
         </div>
       </div>
+      <div class="center-text-box">こういう悲劇・面倒を防げます</div>
     </section>
 
     <section class="slide">
@@ -120,6 +136,7 @@
         <div>
           <p>作業履歴・差分があるのでひとつ前に戻ることができる。</p>
           <p>現在の状態と以前の状態を比較することができる。</p>
+          <p>※ソースコード・テキストファイルに限ります。バイナリファイルはファイルそのものの差分となります。</p>
         </div>
 
       </div>
@@ -203,7 +220,7 @@
 
     <section class="slide">
       <h2>Git≠GitHub</h2>
-      <div class="contents-box">
+      <div class="contents-box small-img">
         <h3>Git</h3>
         <div>
           <p>Gitはバージョン管理を行う<strong>ツール</strong>の名前である。</p>
@@ -212,6 +229,14 @@
           <h3>GitHub</h3>
           <p>GitHubは<strong>Gitのリモートリポジトリ</strong>を提供するサービスの名前である。</p>
           <p>同様のサービスに<strong>Bitbucket</strong>、<strong>Backlog</strong>、<strong>GitLab</strong>などがある。</p>
+        </div>
+        <div>
+          <img src="img/10.png" alt="10.png">
+        </div>
+        <div>
+          <img src="img/13.png" alt="13.png">
+          <img src="img/14.png" alt="14.png">
+          <img src="img/15.png" alt="15.png">
         </div>
       </div>
     </section>
@@ -367,9 +392,34 @@
         </ul>
       </div>
       <div>
-        <h3>GitHubPaages</h3>
+        <h3>GitHubPages</h3>
         <ul>
           <li><a href="https://pinball1973b.github.io/git_work_slide/">https://pinball1973b.github.io/git_work_slide/</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>参考サイト・リンク集</h2>
+      <div>
+        <h3>使用するソフトウェア・サービス</h3>
+        <ul class="normal-list">
+          <li><a href="https://github.com/">GitHub</a></li>
+          <li><a href="https://bitbucket.org/">Bitbucket</a></li>
+          <li><a href="https://ja.atlassian.com/software/sourcetree">SourceTree</a></li>
+          <li><a href="https://ja.osdn.net/projects/ttssh2/">Tera Terme</a></li>
+          <li><a href="http://www.putty.org/">PuTTy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参考サイト</h3>
+        <ul>
+          <li><a href="http://www.backlog.jp/git-guide/intro/intro1_1.html">サルでもわかるGit入門</a></li>
+          <li><a href="https://www.atlassian.com/ja/git/tutorial">Gitチュートリアル</a></li>
+          <li><a href="http://blog.asial.co.jp/894">イラストで分かるGit入門の入門</a></li>
+          <li><a href="http://qiita.com/konweb/items/621722f67fdd8f86a017">Git基本コマンド</a></li>
+          <li><a href="http://akiyoko.hatenablog.jp/entry/2014/12/02/000939">初心者がプルリクまでに覚えるべきたった 9つの厳選 Gitコマンド</a></li>
+          <li><a href="https://blog.sixapart.jp/2014-03/mttips-02-what-is-git.html">「そもそもGitって何？」、「GitとGitHubは何が違うの？」にシンプルに答えるよ</a></li>
         </ul>
       </div>
     </section>
