@@ -36,7 +36,7 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Branu Git勉強会</h1>
+      <h1 class="all-top">ゼロから始める$git commit -m</h1>
       <div class="profile">開発部 小原 国人</div>
     </section>
 
@@ -48,6 +48,7 @@
           <li>何故Gitを使うのか？</li>
           <li>バージョン管理</li>
           <li>複数人での開発</li>
+          <li>職種別使用シーン</li>
           <li>Git≠GitHub</li>
           <li>実際に使ってみよう</li>
           <li>よく使うコマンド</li>
@@ -74,7 +75,7 @@
       <div class="contents-box hatena">
         <div class="contents-section-box">
           <div class="img-box">
-            <img src="img/12.png">
+            <img src="img/17.png">
           </div>
           <div class="word_5">
              なんのこっちゃ？<br>
@@ -147,42 +148,7 @@
       <div class="contents-box">
         <h3>バージョン管理=履歴・差分管理</h3>
         <div class="version-flow-box">
-          <ul class="box-1">
-            <li>
-              Master<br>
-              Ver.1
-            </li>
-            <li>
-              Master<br>
-              Ver.2
-            </li>
-            <li>
-              Master<br>
-              Ver.3
-            </li>
-          </ul>
-          <ul class="box-2">
-            <li>
-              Release<br>
-              20170401
-            </li>
-            <li>
-              Release<br>
-              20170501
-            </li>
-            <li>
-              Release<br>
-              20170601
-            </li>
-          </ul>
-          <ul class="box-3">
-            <li>Fix<br>
-              20170405
-            </li>
-            <li>Fix<br>
-              20170515
-            </li>
-          </ul>
+          <img src="img/20.png">
         </div>
         <div>
           <p>リリースや機能開発、改修などによりブランチを分け作業。</p>
@@ -215,6 +181,21 @@
         <div>
           <p>各ローカルマシンのリポジトリで行われた開発を、リポートリポジトリに反映。</p>
         </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>エンジニア以外の職種別使用シーン</h2>
+      <div class="contents-box">
+        <dl>
+          <dt>WEBデザイナー・コーダー</dt>
+          <dd>HTML/CSSのバージョン管理</dd>
+          <dt>ディレクター・ライター</dt>
+          <dd>ドキュメント管理</dd>
+        </dl>
+      </div>
+      <div>
+        <img src="img/18.png">
       </div>
     </section>
 
@@ -413,7 +394,7 @@
       </div>
       <div>
         <h3>参考サイト</h3>
-        <ul>
+        <ul class="normal-list">
           <li><a href="http://www.backlog.jp/git-guide/intro/intro1_1.html">サルでもわかるGit入門</a></li>
           <li><a href="https://www.atlassian.com/ja/git/tutorial">Gitチュートリアル</a></li>
           <li><a href="http://blog.asial.co.jp/894">イラストで分かるGit入門の入門</a></li>
@@ -422,6 +403,14 @@
           <li><a href="https://blog.sixapart.jp/2014-03/mttips-02-what-is-git.html">「そもそもGitって何？」、「GitとGitHubは何が違うの？」にシンプルに答えるよ</a></li>
         </ul>
       </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="all-top">おまけ</h1>
+      <ul>
+        <li>このスライドは<a href="https://github.com/imakewebthings/deck.js/">deck.js</a>で作成しました。</li>
+        <li>コンパイルは<a href="https://webpack.github.io/">WebPack</a>で行いました。</li>
+      </ul>
     </section>
 
     <!-- End slides. -->
